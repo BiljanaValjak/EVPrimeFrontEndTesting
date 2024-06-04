@@ -16,5 +16,4 @@ public class DateBuilder {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         return date.format(formatter);
     }
-
 }

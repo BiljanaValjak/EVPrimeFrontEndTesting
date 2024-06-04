@@ -22,7 +22,6 @@ public class AddNewEventTests {
     private AddNewEventPage addNewEventPage;
     private DeleteEventPage deleteEventPopUp;
 
-
     @Before
     public void setUp() throws InterruptedException {
         driver = new ChromeDriver();
@@ -62,7 +61,6 @@ public class AddNewEventTests {
         Thread.sleep(3000);
         eventsPage.hoverOverPlusButton();
         eventsPage.clickAddEventButton();
-
     }
 
     @Test
@@ -90,7 +88,6 @@ public class AddNewEventTests {
 
         deleteEventPopUp.clickDeleteButtonPopUpMsg();
         assertFalse( eventsPage.isEventPresents(id));
-
     }
 
     @Test
@@ -120,12 +117,10 @@ public class AddNewEventTests {
         assertEquals("\"Josefin Sans\"",addNewEventPage.createEventButtonFontFamily());
         assertEquals("#304ffe",addNewEventPage.createEventButtonBackgroundColor());
         assertEquals("#ffffff",addNewEventPage.createEventButtonColor());
-
     }
 
     @After
     public void closeBrowser() {
         driver.quit();
     }
-
 }

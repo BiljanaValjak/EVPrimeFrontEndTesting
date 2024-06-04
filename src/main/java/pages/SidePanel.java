@@ -4,7 +4,6 @@ import org.openqa.selenium.*;
 
 public class SidePanel extends BasePage{
 
-
     private By menuIcon = By.xpath("//*[@id=\"root\"]/div/div/header/div/button");
     private By listOfElementsSidePanel = By.xpath("//*[@id=\"root\"]/div/div/div/div/div/ul");
     private By homeLink = By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/ul/li[1]");
@@ -13,8 +12,6 @@ public class SidePanel extends BasePage{
     private By loginLink = By.xpath("//*[@id=\"root\"]/div/div/div/div/div/ul/li[4]");
     private By logOutLink = By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/ul/li");
     private By closeMenuButton = By.xpath("//*[@id=\"root\"]/div/div/div/div/div/div/button");
-
-
 
     public SidePanel (WebDriver driver){
         super(driver);

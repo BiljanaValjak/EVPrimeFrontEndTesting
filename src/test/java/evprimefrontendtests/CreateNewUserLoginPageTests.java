@@ -18,7 +18,6 @@ public class CreateNewUserLoginPageTests {
     private SidePanel sidePanel;
     private CreateNewUserLoginPage loginPage;
 
-
     @Before
     public void setUp() throws InterruptedException {
         driver = new ChromeDriver();
@@ -31,14 +30,12 @@ public class CreateNewUserLoginPageTests {
         sidePanel.clickMenuIcon();
         Thread.sleep(3000);
         sidePanel.clickLoginLink();
-
     }
 
     @Test
     public void loginPageDisplayedTest(){
         assertTrue(loginPage.logInPageTitleDisplayed());
         assertEquals("Log in",loginPage.getLogIntPageTitle());
-
     }
 
     @Test
@@ -75,7 +72,6 @@ public class CreateNewUserLoginPageTests {
         Thread.sleep(5000);
 
         assertTrue(sidePanel.loginLinkDisplayed());
-
     }
 
     @After

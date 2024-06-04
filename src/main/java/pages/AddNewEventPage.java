@@ -18,7 +18,6 @@ public class AddNewEventPage extends BasePage{
     private By createEventButton = By.xpath("//*[@id=\"root\"]/div/div[1]/main/div[2]/form/div/button");
     private By newErrorPage = By.xpath("//*[@id=\"root\"]/div/h2");
 
-
     public AddNewEventPage (WebDriver driver){
         super(driver);
     }

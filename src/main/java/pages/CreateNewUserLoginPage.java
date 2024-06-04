@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public class CreateNewUserLoginPage extends BasePage{
 
-
     private By loginTitle = By.xpath("//*[@id=\"root\"]/div/div/main/div[2]/div/div/form/div/div[1]");
     private By changingButton = By.xpath("//*[@id=\"root\"]/div/div/main/div[2]/div/div/form/div/div[4]/div[2]/button");
     private By emailTextBoxCreateUser = By.xpath("//*[@id=\":r0:\"]");
@@ -15,7 +14,6 @@ public class CreateNewUserLoginPage extends BasePage{
     private By goButton = By.xpath("//*[@id=\"root\"]/div/div/main/div[2]/div/div/form/div/div[4]/div[1]/button");
     private By errorMessage = By.xpath("//*[@id=\"root\"]/div/div/main/div[2]/div/div/form/div/ul");
     private By errorDescription = By.xpath("//*[@id=\"root\"]/div/div/main/div[2]/div/div/form/div/span");
-
 
     public CreateNewUserLoginPage(WebDriver driver){
         super(driver);

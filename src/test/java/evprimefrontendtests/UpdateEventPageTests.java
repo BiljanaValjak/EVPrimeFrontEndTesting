@@ -23,7 +23,6 @@ public class UpdateEventPageTests {
     private AddNewEventPage addNewEventPage;
     private DeleteEventPage deleteEventPage;
 
-
     @Before
     public void setUp() throws InterruptedException {
         driver = new ChromeDriver();
@@ -77,7 +76,6 @@ public class UpdateEventPageTests {
         eventsPage.lastEntry();
         Thread.sleep(5000);
         singleEventPage.clickEditEventButton();
-
     }
 
     @Test
@@ -94,7 +92,6 @@ public class UpdateEventPageTests {
         singleEventPage.singleEventPageDisplayed();
         singleEventPage.clickDeleteButton();
         deleteEventPage.clickDeleteButtonPopUpMsg();
-
     }
 
     @Test
@@ -109,12 +106,10 @@ public class UpdateEventPageTests {
         eventsPage.lastEntry();
         singleEventPage.clickDeleteButton();
         deleteEventPage.clickDeleteButtonPopUpMsg();
-
     }
 
     @After
     public void closeBrowser() {
         driver.quit();
     }
-
 }

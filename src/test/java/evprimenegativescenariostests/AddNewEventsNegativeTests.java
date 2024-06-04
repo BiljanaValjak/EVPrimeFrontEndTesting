@@ -27,7 +27,6 @@ public class AddNewEventsNegativeTests {
     String location = RandomStringUtils.randomAlphanumeric(15);
     String description = RandomStringUtils.randomAlphanumeric(50);
 
-
     @Before
     public void setUp() throws InterruptedException {
         driver = new ChromeDriver();
@@ -65,7 +64,6 @@ public class AddNewEventsNegativeTests {
 
         eventsPage.hoverOverPlusButton();
         eventsPage.clickAddEventButton();
-
     }
 
     @Test
@@ -80,7 +78,6 @@ public class AddNewEventsNegativeTests {
         assertEquals("http://localhost:3000/events/new", addNewEventPage.getUrlFromPage());
         assertTrue(addNewEventPage.errorPageDisplayed());
         assertEquals("Unexpected Application Error!",addNewEventPage.errorPageTitle());
-
     }
 
     @Test
@@ -95,7 +92,6 @@ public class AddNewEventsNegativeTests {
         addNewEventPage.getUrlFromPage();
         assertTrue(addNewEventPage.errorPageDisplayed());
         assertEquals("Unexpected Application Error!",addNewEventPage.errorPageTitle());
-
     }
 
     @Test
@@ -110,7 +106,6 @@ public class AddNewEventsNegativeTests {
         addNewEventPage.getUrlFromPage();
         assertTrue(addNewEventPage.errorPageDisplayed());
         assertEquals("Unexpected Application Error!",addNewEventPage.errorPageTitle());
-
     }
 
     @Test
@@ -125,7 +120,6 @@ public class AddNewEventsNegativeTests {
         addNewEventPage.getUrlFromPage();
         assertTrue(addNewEventPage.errorPageDisplayed());
         assertEquals("Unexpected Application Error!",addNewEventPage.errorPageTitle());
-
     }
 
     @Test
@@ -140,7 +134,6 @@ public class AddNewEventsNegativeTests {
         addNewEventPage.getUrlFromPage();
         assertTrue(addNewEventPage.errorPageDisplayed());
         assertEquals("Unexpected Application Error!",addNewEventPage.errorPageTitle());
-
     }
 
     @Test
@@ -155,12 +148,10 @@ public class AddNewEventsNegativeTests {
         addNewEventPage.getUrlFromPage();
         assertTrue(addNewEventPage.errorPageDisplayed());
         assertEquals("Unexpected Application Error!",addNewEventPage.errorPageTitle());
-
     }
 
     @After
     public void closeBrowser() {
         driver.quit();
     }
-
 }

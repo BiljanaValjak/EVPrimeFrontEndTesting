@@ -22,7 +22,6 @@ public class DeleteEventTests {
     private AddNewEventPage addNewEventPage;
     private DeleteEventPage deleteEvent;
 
-
     @Before
     public void setUp() throws InterruptedException {
         driver = new ChromeDriver();
@@ -77,7 +76,6 @@ public class DeleteEventTests {
         Thread.sleep(5000);
 
         eventsPage.lastEntry();
-
     }
 
     @Test
@@ -89,7 +87,6 @@ public class DeleteEventTests {
 
         singleEventPage.clickDeleteButton();
         deleteEvent.clickDeleteButtonPopUpMsg();
-
     }
 
     @Test
@@ -104,7 +101,6 @@ public class DeleteEventTests {
 
         eventsPage.eventsListPageDisplayed();
         assertFalse(eventsPage.isEventPresents(id));
-
     }
 
     @Test
@@ -125,7 +121,6 @@ public class DeleteEventTests {
         assertEquals("\"Josefin Sans\"",deleteEvent.noButtonFontFamily());
         assertEquals("#ffffff",deleteEvent.noButtonColor());
         assertEquals("#9c27b0",deleteEvent.noButtonBackgroundColor());
-
     }
 
     @After

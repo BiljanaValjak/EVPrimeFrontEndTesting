@@ -19,7 +19,6 @@ public class EventsPageTests {
     private CreateNewUserLoginPage loginPage;
     private SingleEventPage singleEventPage;
 
-
     @Before
     public void setUp() throws InterruptedException {
         driver = new ChromeDriver();
@@ -53,7 +52,6 @@ public class EventsPageTests {
         Thread.sleep(5000);
 
         sidePanel.clickEventsLink();
-
     }
 
     @Test
@@ -68,7 +66,6 @@ public class EventsPageTests {
         assertEquals("http://localhost:3000/events",singleEventPage.hrefFromBackToEventsButton());
         singleEventPage.clickBackToEventsButton();
         assertTrue(eventsPage.eventsListPageDisplayed());
-
     }
 
     @Test
@@ -76,12 +73,10 @@ public class EventsPageTests {
         eventsPage.hoverOverPlusButton();
         eventsPage.clickAddEventButton();
         sidePanel.clickHomeLink();
-
     }
 
     @After
     public void closeBrowser() {
         driver.quit();
     }
-
 }

@@ -18,7 +18,6 @@ public class ContactPageTests {
     private SidePanel sidePanel;
     private ContactPage contactPage;
 
-
     @Before
     public void setUp() throws InterruptedException {
         driver = new ChromeDriver();
@@ -31,7 +30,6 @@ public class ContactPageTests {
         sidePanel.clickMenuIcon();
         Thread.sleep(3000);
         sidePanel.clickContactLink();
-
     }
 
     @Test
@@ -42,7 +40,6 @@ public class ContactPageTests {
         assertEquals("Want to reach out?",contactPage.getContactPageTitle());
         assertEquals("60px", contactPage.titleFontSize());
         assertEquals("\"Josefin Sans\"", contactPage.titleFontFamily());
-
     }
 
     @Test
@@ -51,7 +48,6 @@ public class ContactPageTests {
         contactPage.insertEmail(RandomStringUtils.randomAlphanumeric(15) + "@mail.com");
         contactPage.insertMessage(RandomStringUtils.randomAlphanumeric(50));
         contactPage.clickSendButton();
-
     }
 
     @Test
@@ -63,7 +59,6 @@ public class ContactPageTests {
         assertEquals("\"Josefin Sans\"", contactPage.sendButtonFontFamily());
         assertEquals("#ffffff",contactPage.senButtonColor() );
         assertEquals("#304ffe", contactPage.sendButtonBackgroundColor());
-
     }
 
     @Test
@@ -76,7 +71,6 @@ public class ContactPageTests {
 
         assertEquals("16px", contactPage.messageTextBoxFontSize());
         assertEquals("\"Josefin Sans\"", contactPage.messageTextBoxFontFamily());
-
     }
 
     @Test
@@ -88,7 +82,6 @@ public class ContactPageTests {
         assertEquals("\"Josefin Sans\"", contactPage.contactAttributesFontFamily());
         assertEquals("16px", contactPage.contactInformationFontSize());
         assertEquals("\"Josefin Sans\"", contactPage.contactInformationFontFamily());
-
     }
 
     @After

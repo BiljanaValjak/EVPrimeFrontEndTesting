@@ -13,15 +13,14 @@ import util.DateBuilder;
 import static org.junit.Assert.assertEquals;
 
 public class CreateNewUserLoginUserNegativeTests {
-    DateBuilder dateBuilder = new DateBuilder();
 
+    DateBuilder dateBuilder = new DateBuilder();
     private WebDriver driver;
     private SidePanel sidePanel;
     private CreateNewUserLoginPage loginPage;
 
     String email = "testmail" + dateBuilder.currentTime() + "@mail.com";
     String password = "testpassword";
-
 
     @Before
     public void setUp() throws InterruptedException {
@@ -35,7 +34,6 @@ public class CreateNewUserLoginUserNegativeTests {
         sidePanel.clickMenuIcon();
         Thread.sleep(3000);
         sidePanel.clickLoginLink();
-
     }
 
     @Test
@@ -51,7 +49,6 @@ public class CreateNewUserLoginUserNegativeTests {
 
         assertEquals("Invalid password. Must be at least 6 characters long.", loginPage.getErrorMessage());
         assertEquals("User signup failed due to validation errors.", loginPage.getErrorDescription());
-
     }
 
     @Test
@@ -86,7 +83,6 @@ public class CreateNewUserLoginUserNegativeTests {
 
         assertEquals("Email exists already.", loginPage.getErrorMessage());
         assertEquals("User signup failed due to validation errors.", loginPage.getErrorDescription());
-
     }
 
     @Test
@@ -101,7 +97,6 @@ public class CreateNewUserLoginUserNegativeTests {
         Thread.sleep(5000);
         assertEquals("Invalid email.", loginPage.getErrorMessage());
         assertEquals("User signup failed due to validation errors.", loginPage.getErrorDescription());
-
     }
 
     @Test
@@ -123,12 +118,10 @@ public class CreateNewUserLoginUserNegativeTests {
         Thread.sleep(5000);
         assertEquals("Invalid email or password entered.", loginPage.getErrorMessage());
         assertEquals("Invalid credentials.", loginPage.getErrorDescription());
-
     }
 
     @After
     public void closeBrowser() {
         driver.quit();
     }
-
 }

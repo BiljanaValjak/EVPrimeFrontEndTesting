@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class SingleEventPage extends BasePage{
+
     private By singleEventPage = By.xpath("//*[@id=\"root\"]/div/div/main/div[2]");
     private By eventTitle = By.xpath("//*[@id=\"root\"]/div/div[1]/main/div[2]/div[1]/div[1]/div[1]/h2");
     private By dateElement = By.xpath("//*[@id=\"root\"]/div/div/main/div[2]/div[1]/div[1]/div[2]/h6");

@@ -20,7 +20,6 @@ public class SingleEventPageTests {
     private SingleEventPage singleEventPage;
     private CreateNewUserLoginPage loginPage;
 
-
     @Before
     public void setUp() throws InterruptedException {
         driver = new ChromeDriver();
@@ -60,7 +59,6 @@ public class SingleEventPageTests {
         Thread.sleep(3000);
         eventsPage.clickOnEvent(0);
         Thread.sleep(3000);
-
     }
 
     @Test
@@ -70,7 +68,6 @@ public class SingleEventPageTests {
         assertEquals("kPKkTf4KSI", singleEventPage.titleText());
         assertEquals("3.75", singleEventPage.titleFontSize());
         assertEquals("\"Josefin Sans\"", singleEventPage.titleFontFamily());
-
     }
 
     @Test
@@ -123,7 +120,6 @@ public class SingleEventPageTests {
         assertEquals("0.875", singleEventPage.editEventButtonFontSize());
         assertEquals("\"Josefin Sans\"", singleEventPage.editEventButtonFontFamily());
         assertEquals("#304ffe", singleEventPage.editEventButtonBackGroundColor());
-
     }
 
     @Test
@@ -134,7 +130,6 @@ public class SingleEventPageTests {
         assertEquals("0.875", singleEventPage.deleteButtonTextFontSize());
         assertEquals("\"Josefin Sans\"", singleEventPage.deleteButtonTextFontFamily());
         assertEquals("#d32f2f", singleEventPage.deleteButtonBackGroundColor());
-
     }
 
     @After

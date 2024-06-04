@@ -20,7 +20,6 @@ public class SidePanelTests {
     private ContactPage contactPage;
     private CreateNewUserLoginPage loginPage;
 
-
     @Before
     public void setUp(){
         driver = new ChromeDriver();
@@ -33,7 +32,6 @@ public class SidePanelTests {
 
         sidePanel.navigateTo("http://localhost:3000/");
         sidePanel.clickMenuIcon();
-
     }
 
     @Test
@@ -53,7 +51,6 @@ public class SidePanelTests {
         assertEquals("\"Josefin Sans\"",sidePanel.getHomeLinkFontFamily());
 
         sidePanel.clickHomeLink();
-
     }
 
     @Test
@@ -70,7 +67,6 @@ public class SidePanelTests {
         Thread.sleep(5000);
         assertEquals("kPKkTf4KSI\n" +
                 "2024-05-06", eventsPage.listOfEvents(0));
-
     }
 
     @Test
@@ -86,7 +82,6 @@ public class SidePanelTests {
         assertEquals("Want to reach out?", contactPage.getContactPageTitle());
 
         sidePanel.clickHomeLink();
-
     }
 
     @Test
@@ -103,7 +98,6 @@ public class SidePanelTests {
 
         sidePanel.clickHomeLink();
         loginPage.logInPageTitleDisplayed();
-
     }
 
     @Test
@@ -111,7 +105,6 @@ public class SidePanelTests {
         assertTrue(sidePanel.allSidePanelLinksDisplayed());
         Thread.sleep(5000);
         sidePanel.clickCloseMenuButton();
-
     }
 
     @After

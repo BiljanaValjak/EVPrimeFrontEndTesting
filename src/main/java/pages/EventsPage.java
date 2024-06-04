@@ -12,7 +12,6 @@ public class EventsPage extends BasePage{
     private By plusButton = By.xpath("//*[@id=\"root\"]/div/div[2]/button");
     private By addEventButton = By.xpath("//*[@id=\"SpeedDial-actions\"]/button");
 
-
     public EventsPage(WebDriver driver){
         super(driver);
     }
@@ -63,5 +62,4 @@ public class EventsPage extends BasePage{
         }
         return isElementPresent(eventsList, id);
     }
-
 }

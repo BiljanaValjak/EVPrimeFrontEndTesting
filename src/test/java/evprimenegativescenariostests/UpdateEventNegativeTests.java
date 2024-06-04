@@ -22,7 +22,6 @@ public class UpdateEventNegativeTests {
     private UpdateEventPage updateEventPage;
     private SingleEventPage singleEventPage;
 
-
     @Before
     public void setUp() throws InterruptedException {
         driver = new ChromeDriver();
@@ -65,7 +64,6 @@ public class UpdateEventNegativeTests {
         eventsPage.clickOnEvent(0);
         Thread.sleep(5000);
         singleEventPage.clickEditEventButton();
-
     }
 
     @Test
@@ -77,7 +75,6 @@ public class UpdateEventNegativeTests {
         addNewEventPage.getUrlFromPage();
         assertTrue(updateEventPage.errorPageDisplayed());
         assertEquals("Unexpected Application Error!",updateEventPage.errorPageTitle());
-
     }
 
     @Test
@@ -89,7 +86,6 @@ public class UpdateEventNegativeTests {
         addNewEventPage.getUrlFromPage();
         assertTrue(updateEventPage.errorPageDisplayed());
         assertEquals("Unexpected Application Error!",updateEventPage.errorPageTitle());
-
     }
 
     @Test
@@ -103,7 +99,6 @@ public class UpdateEventNegativeTests {
         addNewEventPage.getUrlFromPage();
         assertTrue(updateEventPage.errorPageDisplayed());
         assertEquals("Unexpected Application Error!",updateEventPage.errorPageTitle());
-
     }
 
     @Test
@@ -115,7 +110,6 @@ public class UpdateEventNegativeTests {
         addNewEventPage.getUrlFromPage();
         assertTrue(updateEventPage.errorPageDisplayed());
         assertEquals("Unexpected Application Error!",updateEventPage.errorPageTitle());
-
     }
 
     @Test
@@ -127,13 +121,11 @@ public class UpdateEventNegativeTests {
         addNewEventPage.getUrlFromPage();
         assertTrue(updateEventPage.errorPageDisplayed());
         assertEquals("Unexpected Application Error!",updateEventPage.errorPageTitle());
-
     }
 
     @After
     public void closeBrowser() {
         driver.quit();
     }
-
 }
 

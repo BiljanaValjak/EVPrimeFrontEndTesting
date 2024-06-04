@@ -15,7 +15,6 @@ public class ContactPageNegativeTests {
     private SidePanel sidePanel;
     private ContactPage contactPage;
 
-
     @Before
     public void setUp() throws InterruptedException {
         driver = new ChromeDriver();
@@ -28,7 +27,6 @@ public class ContactPageNegativeTests {
         sidePanel.clickMenuIcon();
         Thread.sleep(2000);
         sidePanel.clickContactLink();
-
     }
 
     @Test
@@ -38,7 +36,6 @@ public class ContactPageNegativeTests {
         contactPage.insertMessage(RandomStringUtils.randomAlphanumeric(50));
 
         contactPage.clickSendButton();
-
     }
 
     @Test
@@ -48,7 +45,6 @@ public class ContactPageNegativeTests {
         contactPage.insertMessage(RandomStringUtils.randomAlphanumeric(50));
 
         contactPage.clickSendButton();
-
     }
 
     @Test
@@ -58,12 +54,10 @@ public class ContactPageNegativeTests {
         contactPage.insertMessage("");
 
         contactPage.clickSendButton();
-
     }
 
     @After
     public void closeBrowser() {
         driver.quit();
     }
-
 }

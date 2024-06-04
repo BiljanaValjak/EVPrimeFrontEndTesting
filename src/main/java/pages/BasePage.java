@@ -14,7 +14,6 @@ public abstract class BasePage {
     public BasePage(WebDriver driver){
         this.driver = driver;
         actions = new Actions(driver);
-
     }
 
     public void navigateTo(String url){
@@ -121,5 +120,4 @@ public abstract class BasePage {
                 pxValue);
         return remValue.toString();
     }
-
 }
